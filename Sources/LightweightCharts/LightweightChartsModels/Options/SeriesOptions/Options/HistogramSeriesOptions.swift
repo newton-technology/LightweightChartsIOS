@@ -20,6 +20,7 @@ public struct HistogramSeriesOptions: SeriesOptionsCommon {
     
     public var color: ChartColor?
     public var base: Double?
+    public var cornerRadius: Float?
     
     public init(lastValueVisible: Bool? = nil,
                 title: String? = nil,
@@ -37,7 +38,8 @@ public struct HistogramSeriesOptions: SeriesOptionsCommon {
                 baseLineStyle: LineStyle? = nil,
                 autoscaleInfoProvider: AutoscaleInfoProvider? = nil,
                 color: ChartColor? = nil,
-                base: Double? = nil) {
+                base: Double? = nil,
+                cornerRadius: Float? = nil) {
         self.lastValueVisible = lastValueVisible
         self.title = title
         self.priceScaleId = priceScaleId
@@ -55,6 +57,7 @@ public struct HistogramSeriesOptions: SeriesOptionsCommon {
         self.autoscaleInfoProvider = autoscaleInfoProvider
         self.color = color
         self.base = base
+        self.cornerRadius = cornerRadius
     }
     
 }

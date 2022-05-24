@@ -73,6 +73,16 @@ public struct CandlestickSeriesOptions: SeriesOptionsCommon {
      */
     public var wickDownColor: ChartColor?
     
+    /**
+     Radius of corners of candlestick body
+     */
+    public var cornerRadius: Float?
+    
+    /**
+     Width of candlestick wicks
+     */
+    public var wickWidth: Float?
+    
     public init(lastValueVisible: Bool? = nil,
                 title: String? = nil,
                 priceScaleId: String? = nil,
@@ -97,7 +107,9 @@ public struct CandlestickSeriesOptions: SeriesOptionsCommon {
                 borderDownColor: ChartColor? = nil,
                 wickColor: ChartColor? = nil,
                 wickUpColor: ChartColor? = nil,
-                wickDownColor: ChartColor? = nil) {
+                wickDownColor: ChartColor? = nil,
+                cornerRadius: Float? = nil,
+                wickWidth: Float? = nil) {
         self.lastValueVisible = lastValueVisible
         self.title = title
         self.priceScaleId = priceScaleId
@@ -123,6 +135,8 @@ public struct CandlestickSeriesOptions: SeriesOptionsCommon {
         self.wickColor = wickColor
         self.wickUpColor = wickUpColor
         self.wickDownColor = wickDownColor
+        self.cornerRadius = cornerRadius
+        self.wickWidth = wickWidth
     }
     
 }
