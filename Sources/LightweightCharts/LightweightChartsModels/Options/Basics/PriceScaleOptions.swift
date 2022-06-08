@@ -50,6 +50,11 @@ protocol OverlayPriceScaleOptionsProtocol {
     var alignLabels: Bool? { get }
     
     /**
+     True value sticks labels to the price scale borders if they are off boundaries
+     */
+    var stickLabels: Bool? { get }
+    
+    /**
      Defines price margins for the price scale
      */
     var scaleMargins: PriceScaleMargins? { get }
@@ -101,6 +106,7 @@ public struct PriceScaleOptions: Codable, VisiblePriceScaleOptionsProtocol {
     public var mode: PriceScaleMode?
     public var invertScale: Bool?
     public var alignLabels: Bool?
+    public var stickLabels: Bool?
     public var scaleMargins: PriceScaleMargins?
     public var borderVisible: Bool?
     public var borderColor: ChartColor?
@@ -112,6 +118,7 @@ public struct PriceScaleOptions: Codable, VisiblePriceScaleOptionsProtocol {
                 mode: PriceScaleMode? = nil,
                 invertScale: Bool? = nil,
                 alignLabels: Bool? = nil,
+                stickLabels: Bool? = nil,
                 scaleMargins: PriceScaleMargins? = nil,
                 borderVisible: Bool? = nil,
                 borderColor: ChartColor? = nil,
@@ -122,6 +129,7 @@ public struct PriceScaleOptions: Codable, VisiblePriceScaleOptionsProtocol {
         self.mode = mode
         self.invertScale = invertScale
         self.alignLabels = alignLabels
+        self.stickLabels = stickLabels
         self.scaleMargins = scaleMargins
         self.borderVisible = borderVisible
         self.borderColor = borderColor
@@ -144,6 +152,7 @@ public struct OverlayPriceScaleOptions: Codable, OverlayPriceScaleOptionsProtoco
     public var mode: PriceScaleMode?
     public var invertScale: Bool?
     public var alignLabels: Bool?
+    public var stickLabels: Bool?
     public var scaleMargins: PriceScaleMargins?
     public var borderVisible: Bool?
     public var borderColor: ChartColor?
@@ -154,6 +163,7 @@ public struct OverlayPriceScaleOptions: Codable, OverlayPriceScaleOptionsProtoco
                 mode: PriceScaleMode? = nil,
                 invertScale: Bool? = nil,
                 alignLabels: Bool? = nil,
+                stickLabels: Bool? = nil,
                 scaleMargins: PriceScaleMargins? = nil,
                 borderVisible: Bool? = nil,
                 borderColor: ChartColor? = nil,
@@ -163,6 +173,7 @@ public struct OverlayPriceScaleOptions: Codable, OverlayPriceScaleOptionsProtoco
         self.mode = mode
         self.invertScale = invertScale
         self.alignLabels = alignLabels
+        self.stickLabels = stickLabels
         self.scaleMargins = scaleMargins
         self.borderVisible = borderVisible
         self.borderColor = borderColor
